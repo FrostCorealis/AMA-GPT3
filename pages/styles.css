@@ -56,14 +56,27 @@ body {
     line-height: 1.2em;
     text-align: center;
     margin: 0;
+    text-shadow: 5px 8px 10px rgb(255, 18, 18);
 }
 
 .header-subtitle h2 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4em;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+}
+
+.header-subtitle h3 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
+    /*color: rgba(255, 255, 255, 0.75);*/
+    color: rgba(255, 18, 18, 0.85);
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.75);
+    text-align: center;
 }
 
 .prompt-container {
@@ -80,7 +93,8 @@ body {
 
 .prompt-box {
     border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 19px rgb(255, 18, 18);
     border-left-width: 1px;
     border-right-width: 1px;
     border-style: solid;
@@ -172,7 +186,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    /* background-color: rgb(255, 79, 18); */
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -186,6 +200,16 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
+
+    background-image: linear-gradient(
+    to right,
+    #f1db15 0%,
+    #f1b315 21%,
+    rgb(255, 109, 18) 65%,
+    rgb(255, 18, 18) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
 }
 
 .generate {
@@ -321,9 +345,9 @@ textarea {
 }
 
 .output-content p {
-    text-align: center;
+    text-align: left;
     white-space: pre-line;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
@@ -392,7 +416,7 @@ textarea {
 
 
 
- /* Loading ring animation */
+ /* loading ring animation */
 .loader {
     width: 18px;
     height: 18px;
@@ -413,3 +437,41 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+
+
+/* button animation */
+@-webkit-keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
