@@ -27,13 +27,13 @@ const generateAction = async (req, res) => {
   // second prompt
   const secondPrompt =
   `
-  Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Judith Orloff. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+  Take the table of contents and title of the article below and generate an articlee written in thwe style of Judith Orloff. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
 
   Title: ${req.body.userInput}
 
   Table of Contents: ${basePromptOutput.text}
 
-  Blog Post:
+  Article:
   `
 
   const secondPromptCompletion = await openai.createCompletion({
